@@ -1,0 +1,25 @@
+{% extends 'pdfGen/base.html' %}
+
+{% block content %}
+
+<h2>{{ user_profile.name }}</h2>
+<h2>{{ user_profile.email }}</h2>
+<h2>{{ user_profile.phone }}</h2>
+<hr style="border: 1px solid black;">
+<br>
+<p>Summary</p>
+<p>{{ user_profile.summary }}</p>
+<hr style="border: 1px solid black;">
+<p>Skills</p>
+<p>{{ user_profile.skills }}</p>
+<hr style="border: 1px solid black;">
+<p>Education</p>
+<ul>
+    <li>School: {{ user_profile.school }}</li>
+    <li>{{ user_profile.degree }} form {{ user_profile.university }}</li>
+</ul>
+<hr style="border: 1px solid black;">
+<p>Previous Work</p>
+<p>{{ user_profile.previous_work}}</p>
+
+{% endblock %}
